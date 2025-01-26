@@ -42,6 +42,12 @@ export const ScrollTutorial = () => {
                 <div className="space-y-8">
                   {section.content}
                 </div>
+                {/* Mobile right content */}
+                <div className="lg:hidden mt-12">
+                  <div className="bg-white rounded-2xl shadow-lg p-8">
+                    {section.rightContent}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
