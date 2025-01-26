@@ -53,6 +53,9 @@ export const tutorialContent: TutorialSection[] = [
           <p className="text-lg text-gray-700 leading-relaxed italic">
             By scrolling down you will learn the art of crafting the perfect note to your AI advisor...
           </p>
+          <p className="text-sm text-gray-700 leading-relaxed italic">
+            I first heard this comparison from Przemek Jóźwiakowski - a great guy who's been working with AI for years.
+          </p>
         </div>
       </div>
     ),
