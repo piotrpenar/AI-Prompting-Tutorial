@@ -40,17 +40,18 @@ export const tutorialContent: TutorialSection[] = [
           <p className="text-lg text-gray-700 leading-relaxed">
             Through this hole, you can pass him notes. And despite his isolation, he's incredibly determined to help you with any task. But there's a catch...
           </p>
-          <div className="bg-blue-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-blue-800 mb-4 text-md">The Challenge:</h4>
-            <ul className="space-y-3 text-md text-blue-700">
+          <div className="bg-orange-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-orange-800 mb-4 text-md">The Challenge:</h4>
+            <ul className="space-y-3 text-md text-orange-700">
               <li>• The AI can only work with what you write in your note</li>
+              <li>• You have to convey as much information as possible in your note</li>
               <li>• Every word choice and structure matters</li>
               <li>• The clearer your message, the better the help</li>
               <li>• This note is what we call a "prompt"</li>
             </ul>
           </div>
           <p className="text-lg text-gray-700 leading-relaxed italic">
-            Your journey begins here - learning the art of crafting the perfect note to your AI advisor...
+            By scrolling down you will learn the art of crafting the perfect note to your AI advisor...
           </p>
         </div>
       </div>
@@ -70,6 +71,49 @@ export const tutorialContent: TutorialSection[] = [
         <h3 className="text-3xl font-bold text-gray-800 mb-6">Your AI Advisor</h3>
         <p className="text-lg text-gray-600 mb-4">Infinitely knowledgeable</p>
         <p className="text-md text-gray-500">But can only understand what you write in your note</p>
+      </div>
+    ),
+  },
+  {
+    id: 'understand-basics',
+    title: 'Understand the Basics',
+    content: (
+      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-6">
+          <p className="text-xl text-gray-800 leading-relaxed">
+            Before diving into prompting techniques, it's crucial to understand how AI models actually work.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            The Financial Times has created an excellent interactive guide that explains the fundamentals of generative AI and transformer models.
+          </p>
+          <div className="bg-blue-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-blue-800 mb-4 text-md">What You'll Learn:</h4>
+            <ul className="space-y-3 text-md text-blue-700">
+              <li>• How transformer models process information</li>
+              <li>• The architecture behind modern AI</li>
+              <li>• Why understanding this helps with better prompting</li>
+            </ul>
+          </div>
+          <div className="mt-8">
+            <a 
+              href="https://ig.ft.com/generative-ai/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            >
+              Learn About Transformers →
+            </a>
+          </div>
+        </div>
+      </div>
+    ),
+    rightContent: (
+      <div className="text-center">
+        <div className="p-8 bg-blue-50 rounded-xl">
+          <Brain className="w-16 h-16 text-blue-500 mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-blue-800 mb-6">Foundation First</h3>
+          <p className="text-md text-blue-700">Understanding how AI works will make you better at using it.</p>
+        </div>
       </div>
     ),
   },
@@ -187,21 +231,39 @@ export const tutorialContent: TutorialSection[] = [
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            Different AI models excel at different tasks.
+            Different AI models excel at different tasks, and each has its own weaknesses.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Some models are better at creative writing, while others are better at coding or problem-solving.
+            Understanding these strengths and weaknesses is crucial for choosing the right model for your task.
           </p>
-          <div className="bg-green-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-green-800 mb-4 text-md">Model Selection:</h4>
-            <ul className="space-y-3 text-md text-green-700">
-              <li>• Research and choose the best model for your specific task</li>
-              <li>• Experiment with different models to find the optimal one</li>
+          <div className="bg-orange-100 p-6 rounded-xl">
+            <h4 className="font-semibold text-gray-800 mb-4 text-md">GPT4 & 4o - The Conversational AI:</h4>
+            <ul className="space-y-3 text-md text-gray-700">
+              <li className="text-green-600">• Plus: Great for chat and common information + search</li>
+              <li className="text-red-700">• Minus: Not so smart, makes mistakes, writes extremely predictably - should never be used for creative writing</li>
             </ul>
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Think of it like choosing the right tool for a job - a hammer is great for nails, but not for screws.
-          </p>
+          <div className="bg-orange-100 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-gray-800 mb-4 text-md">Claude 3.5 Sonnet - The Swiss Knife of AI Models:</h4>
+            <ul className="space-y-3 text-md text-gray-700">
+              <li className="text-green-600">• Plus: Great go-to model for complex tasks, visual understanding, tool usage, and text analysis</li>
+              <li className="text-red-700">• Minus: Gets lost in tricky coding situations, can loop and fail to achieve desired results, obsessively creates lists even when told not to</li>
+            </ul>
+          </div>
+          <div className="bg-orange-100 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-gray-800 mb-4 text-md">Gemini 2.0 / Gemini Exp 12-06 - The Poet:</h4>
+            <ul className="space-y-3 text-md text-gray-700">
+              <li className="text-green-600">• Plus: Amazing for writing and processing large amounts of information, great language understanding, excellent rhythm, often one-shots writing tasks</li>
+              <li className="text-red-700">• Minus: Not so good at coding and following rules</li>
+            </ul>
+          </div>
+          <div className="bg-orange-100 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-gray-800 mb-4 text-md">Deepseek v3 / R1 + OpenAI o1 - The Quant Team:</h4>
+            <ul className="space-y-3 text-md ">
+              <li className="text-green-600">• Plus: Excellent at complex tasks requiring "aha" moments, great self-reflection, perfect for coding tests and complex bugs</li>
+              <li className="text-red-700">• Minus: Slow, requires extensive context, poor at creative writing</li>
+            </ul>
+          </div>
         </div>
       </div>
     ),
@@ -222,10 +284,10 @@ export const tutorialContent: TutorialSection[] = [
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            AI models can be easily distracted, like someone with ADHD.
+            AI models can be easily distracted.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            However, they can also provide detailed information when focused but might lose track easily. The good news is, they can quickly retrace steps and correct errors when asked.
+            They can provide A LOT of detailed information when focused but might lose track easily. The good news is, they can quickly retrace steps and correct errors when asked.
           </p>
           <div className="bg-purple-50 p-6 rounded-xl">
             <h4 className="font-semibold text-purple-800 mb-4 text-md">Managing AI's Focus:</h4>
@@ -288,8 +350,60 @@ export const tutorialContent: TutorialSection[] = [
     ),
   },
   {
+    id: 'rule-iteration',
+    title: 'Rule #7: Complex Tasks Need Iteration',
+    content: (
+      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-6">
+          <p className="text-xl text-gray-800 leading-relaxed">
+            For complex tasks, your first prompt will almost never be enough. Expect to iterate at least 3 times (up to 10-15 in most complex ones.)
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Think of it as an iterative process where each attempt reveals what additional information, rules, or constraints you need to add.
+          </p>
+          <div className="bg-rose-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-rose-800 mb-4 text-md">The Iteration Process:</h4>
+            <ul className="space-y-3 text-md text-rose-700">
+              <li>• Start with a basic prompt</li>
+              <li>• Analyze the response for gaps or misunderstandings</li>
+              <li>• Add more context about the specific situation</li>
+              <li>• Add positive rules for what you want</li>
+              <li>• Add negative rules for what to avoid</li>
+              <li>• Repeat until satisfied</li>
+            </ul>
+          </div>
+          <div className="bg-amber-50 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-amber-800 mb-4 text-md">Common Iterations Add:</h4>
+            <ul className="space-y-3 text-md text-amber-700">
+              <li>• Technical constraints and requirements</li>
+              <li>• Edge cases to handle</li>
+              <li>• Specific examples of what not to do</li>
+              <li>• Clarifications based on misunderstandings</li>
+              <li>• Additional context from related systems</li>
+            </ul>
+          </div>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Remember: Each iteration should build upon previous responses, gradually refining the output until it matches your requirements exactly.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            If after 10-15 iterations you're still not satisfied, you propably need to use more advanced techniques, mentioned at the end of this guide.
+          </p>
+        </div>
+      </div>
+    ),
+    rightContent: (
+      <div className="text-center">
+        <div className="p-8 bg-rose-50 rounded-xl">
+          <Workflow className="w-16 h-16 text-rose-500 mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-rose-800 mb-6">Iterate to Perfect</h3>
+          <p className="text-md text-rose-700">Complex tasks require multiple refinements.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
     id: 'rule-formatting',
-    title: 'Rule #7: Formatting Matters',
+    title: 'Rule #8: Formatting Matters',
     content: (
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
@@ -360,25 +474,68 @@ export const tutorialContent: TutorialSection[] = [
     ),
   },
   {
+    id: 'strategies-intro',
+    title: 'Advanced Strategies',
+    content: (
+      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-6">
+          <p className="text-xl text-gray-800 leading-relaxed">
+            The following strategies are novel and context-dependent. They might work exceptionally well in some cases but are not one-size-fits-all solutions.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Think of these as experimental techniques that you can try when standard approaches don't yield the desired results.
+          </p>
+          <div className="bg-purple-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-purple-800 mb-4 text-md">When to Use These Strategies:</h4>
+            <ul className="space-y-3 text-md text-purple-700">
+              <li>• When standard prompting techniques aren't enough</li>
+              <li>• For complex tasks requiring novel approaches</li>
+              <li>• When you need to push the boundaries of what's possible</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    ),
+    rightContent: (
+      <div className="text-center">
+        <div className="p-8 bg-purple-50 rounded-xl">
+          <Workflow className="w-16 h-16 text-purple-500 mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-purple-800 mb-6">Advanced Strategies</h3>
+          <p className="text-md text-purple-700">Context-dependent techniques for complex tasks.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
     id: 'hack-rating',
     title: 'Hack #1: Self-Rating and Correction',
     content: (
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            Ask the AI to rate its own answer and then correct it.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            This simple technique can significantly improve the quality of the AI's response by forcing it to critically evaluate its own work.
+            Ask the AI to rate its own answer for specific quality metrics and then correct it, using target metrics.
           </p>
           <div className="bg-teal-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-teal-800 mb-4 text-md">How to Implement:</h4>
+            <h4 className="font-semibold text-teal-800 mb-4 text-md">Example Quality Metrics for AI to rate itself (1-10):</h4>
             <ul className="space-y-3 text-md text-teal-700">
-              <li>• After receiving the AI's response, ask it to rate its answer on a scale (e.g., 1-10)</li>
-              <li>• Then, ask it to identify areas for improvement and provide a corrected version</li>
+              <li>• Overall Quality</li>
+              <li>• Clarity</li>
+              <li>• Accessibility</li>
+              <li>• Context-Appropriate Language</li>
+              <li>• Style Adherence</li>
+            </ul>
+          </div>
+          <div className="bg-blue-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-blue-800 mb-4 text-md">Process:</h4>
+            <ul className="space-y-3 text-md text-blue-700">
+              <li>1. Write first version</li>
+              <li>2. Rate each quality metric (assume first version has flaws)</li>
+              <li>3. Rewrite to achieve at least 8/10 on all metrics (8 prevents overfitting while ensuring high quality)</li>
+              <li>4. Do a re-rating of the corrected version (this will allow you to write 'now make it 7/10 in clarity and 9/10 in accessibility')</li>
             </ul>
           </div>
           <p className="text-lg text-gray-700 leading-relaxed">
+            This simple technique can significantly improve the quality of the AI's response by forcing it to critically evaluate its own work.
           </p>
         </div>
       </div>
@@ -388,7 +545,7 @@ export const tutorialContent: TutorialSection[] = [
         <div className="p-8 bg-teal-50 rounded-xl">
           <CheckCircle className="w-16 h-16 text-teal-500 mx-auto mb-6" />
           <h3 className="text-xl font-bold text-teal-800 mb-6">Self-Rating & Correction</h3>
-          <p className="text-md text-teal-700">Improve quality through self-evaluation.</p>
+          <p className="text-md text-teal-700">Improve quality through structured self-evaluation.</p>
         </div>
       </div>
     ),
@@ -400,21 +557,25 @@ export const tutorialContent: TutorialSection[] = [
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            Store common prompts in a separate file for easy reference.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            This allows you to quickly reuse effective prompts and build upon previous successes, saving time and effort.
+            Store common prompts in separate text files for easy reference using the @ character in Cursor.
+            We like to store them as files called "prompt_name.task"
           </p>
           <div className="bg-lime-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-lime-800 mb-4 text-md">Building Your Library:</h4>
+            <h4 className="font-semibold text-lime-800 mb-4 text-md">Examples for combining prompts:</h4>
             <ul className="space-y-3 text-md text-lime-700">
+              <li>• Combine write_email.task + format_text_personal.task for personalized emails</li>
+              <li>• Mix write_email.task + format_text_company.task for newsletters</li>
+              <li>• Create task-specific combinations for different needs</li>
+            </ul>
+          </div>
+          <div className="bg-emerald-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-emerald-800 mb-4 text-md">Organization Tips:</h4>
+            <ul className="space-y-3 text-md text-emerald-700">
               <li>• Create a document or spreadsheet to store your prompts</li>
               <li>• Categorize prompts by task or model</li>
               <li>• Include notes on effectiveness and areas for improvement</li>
             </ul>
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-          </p>
         </div>
       </div>
     ),
@@ -423,7 +584,7 @@ export const tutorialContent: TutorialSection[] = [
         <div className="p-8 bg-lime-50 rounded-xl">
           <File className="w-16 h-16 text-lime-500 mx-auto mb-6" />
           <h3 className="text-xl font-bold text-lime-800 mb-6">Create a Prompt Library</h3>
-          <p className="text-md text-lime-700">Save time and reuse effective prompts.</p>
+          <p className="text-md text-lime-700">Save and combine effective prompts.</p>
         </div>
       </div>
     ),
@@ -435,19 +596,18 @@ export const tutorialContent: TutorialSection[] = [
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-          Use meta-prompting: create a prompt that instructs the AI to generate a proper prompt for a specific task.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-          This leverages the AI's own capabilities to improve the quality of your prompts.
+            Use meta-prompting: create a prompt that instructs the AI to generate a proper prompt for a specific task, incorporating the techniques from this guide.
           </p>
           <div className="bg-cyan-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-cyan-800 mb-4 text-md">Example Meta-Prompt:</h4>
-            <p className="text-md text-cyan-700">
-            "Generate a detailed prompt for writing a marketing email for a new product launch, including context, task, and requirements."
-            </p>
+            <h4 className="font-semibold text-cyan-800 mb-4 text-md">Techniques to Include:</h4>
+            <ul className="space-y-3 text-md text-cyan-700">
+              <li>• Clear formatting and structure</li>
+              <li>• Context and requirements</li>
+              <li>• Self-rating mechanism</li>
+              <li>• General-to-specific approach</li>
+              <li>• Explicit rules and constraints</li>
+            </ul>
           </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-          </p>
         </div>
       </div>
     ),
@@ -456,40 +616,7 @@ export const tutorialContent: TutorialSection[] = [
         <div className="p-8 bg-cyan-50 rounded-xl">
           <Minimize className="w-16 h-16 text-cyan-500 mx-auto mb-6" />
           <h3 className="text-xl font-bold text-cyan-800 mb-6">Use Meta-Prompting</h3>
-          <p className="text-md text-cyan-700">Let the AI improve your prompts.</p>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 'hack-gaslighting',
-    title: 'Hack #4: Gaslighting the AI',
-    content: (
-      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
-        <div className="space-y-6">
-          <p className="text-xl text-gray-800 leading-relaxed">
-            To find logic errors, instead of asking directly, state that the text is wrong and ask the AI to point out the errors.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            This pre-determines the AI to find errors, increasing the likelihood of identifying them, even if it hallucinates some in the process.
-          </p>
-          <div className="bg-rose-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-rose-800 mb-4 text-md">Example:</h4>
-            <p className="text-md text-rose-700">
-              "This text contains several logical errors. Identify and explain each error."
-            </p>
-          </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-          </p>
-        </div>
-      </div>
-    ),
-    rightContent: (
-      <div className="text-center">
-        <div className="p-8 bg-rose-50 rounded-xl">
-          <AlertTriangle className="w-16 h-16 text-rose-500 mx-auto mb-6" />
-          <h3 className="text-xl font-bold text-rose-800 mb-6">"Gaslight" the AI</h3>
-          <p className="text-md text-rose-700">Increase error detection.</p>
+          <p className="text-md text-cyan-700">Let the AI improve your prompts using proven techniques.</p>
         </div>
       </div>
     ),
@@ -501,20 +628,20 @@ export const tutorialContent: TutorialSection[] = [
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            Force the AI to go from the most general information to the most specific.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            This approach helps maintain a holistic view while ensuring accuracy and detail.
+            Instruct the AI to structure its response moving from general information to specific details.
           </p>
           <div className="bg-amber-50 p-6 rounded-xl">
-            <h4 className="font-semibold text-amber-800 mb-4 text-md">Example Structure:</h4>
+            <h4 className="font-semibold text-amber-800 mb-4 text-md">AI Response Format:</h4>
             <ul className="space-y-3 text-md text-amber-700">
-                <li>• Start with a broad overview or context</li>
-                <li>• Gradually narrow down to specific details or requirements</li>
-                <li>• Use a predefined structure or plan to guide the process</li>
+              <li>1. Overview of the topic</li>
+              <li>2. Main concepts and principles</li>
+              <li>3. Specific examples and applications</li>
+              <li>4. Detailed implementation steps</li>
+              <li>5. Edge cases and considerations</li>
             </ul>
           </div>
           <p className="text-lg text-gray-700 leading-relaxed">
+            Let the AI manage the progression from broad concepts to specific details, ensuring comprehensive coverage.
           </p>
         </div>
       </div>
@@ -524,22 +651,54 @@ export const tutorialContent: TutorialSection[] = [
         <div className="p-8 bg-amber-50 rounded-xl">
           <ListChecks className="w-16 h-16 text-amber-500 mx-auto mb-6" />
           <h3 className="text-xl font-bold text-amber-800 mb-6">General to Specific</h3>
-          <p className="text-md text-amber-700">Maintain a holistic view with detail.</p>
+          <p className="text-md text-amber-700">Let AI structure the information flow.</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'crafting-prompt',
+    title: 'How to Craft a Prompt',
+    content: (
+      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-6">
+          <p className="text-xl text-gray-800 leading-relaxed">
+            Let's apply the rules and techniques we've learned to craft effective prompts.
+          </p>
+          <div className="bg-blue-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-blue-800 mb-4 text-md">Steps to Follow:</h4>
+            <ul className="space-y-3 text-md text-blue-700">
+              <li>1. Choose the right model for your task</li>
+              <li>2. Structure your prompt with clear formatting</li>
+              <li>3. Provide necessary context and requirements</li>
+              <li>4. Use appropriate techniques based on complexity</li>
+              <li>5. Review and refine based on results</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    ),
+    rightContent: (
+      <div className="text-center">
+        <div className="p-8 bg-blue-50 rounded-xl">
+          <Edit className="w-16 h-16 text-blue-500 mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-blue-800 mb-6">Crafting Process</h3>
+          <p className="text-md text-blue-700">Follow a systematic approach.</p>
         </div>
       </div>
     ),
   },
   {
     id: 'poor-prompt',
-    title: 'Garbage In, Garbage Out',
+    title: 'Example - Bad Prompt',
     content: (
       <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
         <div className="space-y-6">
           <p className="text-xl text-gray-800 leading-relaxed">
-            Let's start with a fundamental principle: "Garbage in, garbage out."
+            Let's examine a poor prompt that violates the rules we've just learned.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            When you make grammar or spelling mistakes, you're not just being unprofessional - you're actively decreasing the probability of getting what you want.
+            This example demonstrates what happens when you don't follow proper prompt crafting techniques.
           </p>
           <div className="bg-red-50 p-6 rounded-xl">
             <h4 className="font-semibold text-red-800 mb-4 text-md">Problems with this prompt:</h4>
@@ -569,7 +728,7 @@ export const tutorialContent: TutorialSection[] = [
         <div className="p-8 bg-red-50 rounded-xl">
           <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-6" />
           <div className="font-mono p-6 bg-white rounded-lg shadow-sm">
-            <p className="text-left text-md text-red-800 font-semibold mb-2">POOR PROMPT:</p>
+            <p className="text-left text-md text-red-800 font-semibold mb-2">BAD PROMPT:</p>
             <p className="text-left text-md text-gray-700">
               Write ane mail that will invite clinet to a meeting.
             </p>
@@ -774,26 +933,26 @@ export const tutorialContent: TutorialSection[] = [
                 Let's explore a range of techniques, from low to high effort, that you can use to improve your prompts:
                 </p>
                 <div className="bg-yellow-50 p-6 rounded-xl">
-                    <h4 className="font-semibold text-yellow-800 mb-4 text-md">Low-Effort Techniques:</h4>
-                    <ul className="space-y-3 text-md text-yellow-700">
+                    <h4 className="font-semibold text-green-800 mb-4 text-md">Low-Effort Techniques:</h4>
+                    <ul className="space-y-3 text-md text-green-700">
                         <li>• Select the right model</li>
                         <li>• Fix typos and grammar mistakes</li>
                         <li>• Add common context</li>
                     </ul>
                 </div>
                 <div className="bg-orange-50 p-6 rounded-xl mt-8">
-                    <h4 className="font-semibold text-orange-800 mb-4 text-md">Medium-Effort Techniques:</h4>
-                    <ul className="space-y-3 text-md text-orange-700">
+                    <h4 className="font-semibold text-yellow-800 mb-4 text-md">Medium-Effort Techniques:</h4>
+                    <ul className="space-y-3 text-md text-yellow-700">
                         <li>• Add examples</li>
                         <li>• Add role to the AI</li>
                         <li>• Add basic formatting (full cap headers, full cap most important words)</li>
                         <li>• Add rules to follow (positive reinforcement)</li>
+                        <li>• Add rules to avoid (negative reinforcement)</li>
                     </ul>
                 </div>
                 <div className="bg-red-50 p-6 rounded-xl mt-8">
-                    <h4 className="font-semibold text-red-800 mb-4 text-md">High-Effort Techniques:</h4>
-                    <ul className="space-y-3 text-md text-red-700">
-                        <li>• Add rules to avoid (negative reinforcement)</li>
+                    <h4 className="font-semibold text-orange-800 mb-4 text-md">High-Effort Techniques:</h4>
+                    <ul className="space-y-3 text-md text-orange-700">
                         <li>• Add XML-like tags to structure the prompt</li>
                         <li>• Add rating and self-correction</li>
                         <li>• Force AI to go from the most general information to the most specific with a predefined structure and plan.</li>
@@ -905,15 +1064,37 @@ export const tutorialContent: TutorialSection[] = [
     id: 'practical-example',
     title: 'Practical Example: Complex Prompt',
     content: (
-        <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-8 transition-all duration-500 min-h-[120vh]">
             <div className="space-y-6">
                 <p className="text-xl text-gray-800 leading-relaxed">
                 Let's examine a real-world example of a highly effective, yet complex, prompt.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                This prompt, used in a testing scenario, demonstrates many of the advanced techniques we've discussed:
+                This prompt, used in a test generation task, demonstrates many of the advanced techniques we've discussed:
                 </p>
-                <div className="bg-gray-100 p-6 rounded-xl font-mono text-sm">
+                
+                <div className="bg-blue-50 p-6 rounded-xl mt-8">
+                    <h4 className="font-semibold text-blue-800 mb-4 text-md">Key Observations:</h4>
+                    <ul className="space-y-3 text-md text-blue-700">
+                        <li>• Minimal filler words for maximum information density</li>
+                        <li>• Simple, direct sentences for clarity</li>
+                        <li>• UPPERCASE words for emphasis on critical constraints (negative reinforcement)</li>
+                    </ul>
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed mt-8">
+                This prompt might seem unreadable to humans, but it's highly effective for communicating precise instructions to an AI.
+                </p>
+            </div>
+        </div>
+    ),
+    rightContent: (
+        <div className="text-center">
+          <div className="p-8 bg-gray-50 rounded-xl">
+            <Code className="w-16 h-16 text-gray-500 mx-auto mb-6" />
+            <div className="bg-gray-100 p-6 rounded-xl font-mono text-sm text-left">
+                    <p>
+                    [...]
+                    </p>
                     <p>
                     Testing execution demands strict adherence to established verification procedures enforcing explicit separation between component validation and server-side processing.
                     </p>
@@ -938,32 +1119,84 @@ export const tutorialContent: TutorialSection[] = [
                     <p className="mt-4 font-bold text-red-700">
                     Browser behavior validation STRICTLY PROHIBITED.
                     </p>
+                    <p>
+                    [...]
+                    </p>
                 </div>
-                <div className="bg-blue-50 p-6 rounded-xl mt-8">
-                    <h4 className="font-semibold text-blue-800 mb-4 text-md">Key Observations:</h4>
-                    <ul className="space-y-3 text-md text-blue-700">
-                        <li>• Minimal filler words for maximum information density</li>
-                        <li>• Simple, direct sentences for clarity</li>
-                        <li>• UPPERCASE words for emphasis on critical constraints (negative reinforcement)</li>
-                    </ul>
-                </div>
-                <p className="text-lg text-gray-700 leading-relaxed mt-8">
-                This prompt might seem unreadable to humans, but it's highly effective for communicating precise instructions to an AI.
-                </p>
-            </div>
-        </div>
-    ),
-    rightContent: (
-        <div className="text-center">
-          <div className="p-8 bg-gray-50 rounded-xl">
-            <Code className="w-16 h-16 text-gray-500 mx-auto mb-6" />
-            <h3 className="text-xl font-bold text-gray-800 mb-6">Complex Prompt Example</h3>
-            <p className="text-md text-gray-700">Precise instructions for an AI, not necessarily for humans.</p>
-            <p className="mt-8 text-sm text-gray-500 italic">
-             IMAGE: A futuristic control panel with various gauges, buttons, and data streams, representing the complexity of managing AI interactions.
-             </p>
           </div>
         </div>
+    ),
+  },
+  {
+    id: 'productivity-boost',
+    title: 'Boosting Your Productivity with AI',
+    content: (
+      <div className="space-y-8 transition-all duration-500 min-h-[70vh]">
+        <div className="space-y-6">
+          <p className="text-xl text-gray-800 leading-relaxed">
+            Let's explore how to maximize your productivity using AI tools and automation.
+          </p>
+          <div className="bg-emerald-50 p-6 rounded-xl">
+            <h4 className="font-semibold text-emerald-800 mb-4 text-md">Using Cursor Effectively:</h4>
+            <ul className="space-y-3 text-md text-emerald-700">
+              <li>• Use Chat Mode for questions and writing tasks</li>
+              <li>• Default to Agent Mode in Composer for most tasks</li>
+              <li>• Run multiple instances of agents (up to 4) for parallel tasks</li>
+              <li>• Create task-specific prompts for common operations</li>
+              <li>• Maintain a knowledge database of effective prompts</li>
+            </ul>
+          </div>
+          <div className="bg-cyan-50 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-cyan-800 mb-4 text-md">Creating Your Own Tools:</h4>
+            <ul className="space-y-3 text-md text-cyan-700">
+              <li>• Build format converters for specific data needs</li>
+              <li>• Create voice-to-text transcription tools</li>
+              <li>• Automate document processing and sorting</li>
+              <li>• Set up code formatting and testing automation</li>
+              <li>• Design custom image generation workflows</li>
+            </ul>
+          </div>
+          <div className="bg-violet-50 p-6 rounded-xl mt-4">
+            <h4 className="font-semibold text-violet-800 mb-4 text-md">Content and Communication:</h4>
+            <ul className="space-y-3 text-md text-violet-700">
+              <li>• Build "content machines" for writing and review</li>
+              <li>• Automate email and message responses</li>
+              <li>• Generate and validate business ideas</li>
+              <li>• Create automated content review systems</li>
+            </ul>
+          </div>
+          <p className="text-lg text-gray-700 leading-relaxed mt-4">
+            Remember: The goal isn't just to use AI, but to create systems that multiply your effectiveness. Start with simple automations and gradually build more complex workflows.
+          </p>
+        </div>
+      </div>
+    ),
+    rightContent: (
+      <div className="text-center">
+        <div className="p-8 bg-emerald-50 rounded-xl">
+          <Bot className="w-16 h-16 text-emerald-500 mx-auto mb-6" />
+          <h3 className="text-xl font-bold text-emerald-800 mb-6">AI Productivity Systems</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <Code className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
+              <p className="text-sm text-emerald-700">Automation</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <MessageSquare className="w-8 h-8 text-cyan-500 mx-auto mb-2" />
+              <p className="text-sm text-cyan-700">Communication</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <Edit className="w-8 h-8 text-violet-500 mx-auto mb-2" />
+              <p className="text-sm text-violet-700">Content</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <Brain className="w-8 h-8 text-rose-500 mx-auto mb-2" />
+              <p className="text-sm text-rose-700">Innovation</p>
+            </div>
+          </div>
+          <p className="mt-6 text-emerald-700 font-medium">Build systems that scale your capabilities</p>
+        </div>
+      </div>
     ),
   },
 ];

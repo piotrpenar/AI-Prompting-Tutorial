@@ -26,6 +26,7 @@ export const ScrollTutorial = () => {
   return (
     <div className="min-h-screen bg-[#fff3e0]">
       <div className="max-w-[1600px] mx-auto px-2 sm:px-6 lg:px-8 py-24">
+        <p className="text-center text-sm text-gray-500 mb-4">By Piotr Penar</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           {/* Left Column - Scrollable Content */}
           <div className="space-y-48">
